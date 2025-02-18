@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .email-container {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <h2>Email Content</h2>
+        <div id="emailContent"></div>
+    </div>
+
+    <script>
+        // Get email content from query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const emailContent = urlParams.get('content');
+        document.getElementById("emailContent").innerHTML = decodeURIComponent(emailContent);
+    </script>
+</body>
+</html>
+
