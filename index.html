@@ -27,9 +27,9 @@
     <script>
         // Get email content from query parameter
         const urlParams = new URLSearchParams(window.location.search);
-        consele.log(urlParams);
+        console.log(urlParams);
         const emailContent = urlParams.get('content');
-        consele.log(emailContent);
+        console.log(emailContent);
         document.getElementById("emailContent").innerHTML = decodeURIComponent(emailContent);
     </script>
 </body>
